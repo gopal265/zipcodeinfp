@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom';
 import { CLEAR } from '../../constants/locationConstants';
 
 const LocationInfo = () => {
@@ -20,7 +19,7 @@ const LocationInfo = () => {
         <div className='center full-width'>
             {/* render the below JSX only if we get response and location is updated with the response data */}
             {   
-                loading == false && location &&
+                loading === false && location &&
                 <div className='center-v info-wrapper'>
                     <h3 className='text-center pb-3 text-color'>Location Information</h3>
                     <table class="table table-striped  table-hover p-2">
@@ -45,8 +44,8 @@ const LocationInfo = () => {
                             <tr>
                                 <th scope="row" >Places</th>
                                 <td  >
-                                    {location.places.map(place => (
-                                        <div className='pb-1'>{place["place name"] ? place["place name"] : "Not Found"}</div>
+                                    {location.places.map((place,index) => (
+                                        <div key={index} className='pb-1'>{place["place name"] ? place["place name"] : "Not Found"}</div>
                                     )
                                     )}
                                 </td>

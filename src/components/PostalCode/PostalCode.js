@@ -30,11 +30,11 @@ const PostalCode = () => {
         <>
             {
                 error &&
-                <div class="alert alert-danger full-width text-center message center" role="alert">
+                <div className="alert alert-danger full-width text-center message center" role="alert">
                     {error}
                     {/* on clicking the x mark it will dispatch clear action to reducer to clear the errors */}
                     <div className='x-mark' onClick={()=>dispatch({type:CLEAR})}>
-                    <i class="fa-solid fa-xmark"></i>
+                    <i className="fa-solid fa-xmark"></i>
                     </div>
                 </div>
             }
@@ -43,14 +43,14 @@ const PostalCode = () => {
                 <div className='center-v input-wrapper'>
 
 
-                    <div class="error pb-4" id='inputerror' >
+                    <div className="error pb-4" id='inputerror' >
 
                     </div>
                     <div className='center'>
 
                         <div className='full-width'>
                             {/* using value and onChange attribute the control the state of the input field */}
-                            <input type='text' className='user-input' placeholder='Enter Postal Code' value={postalCode} onChange={e => setPostalCode(e.target.value)} />
+                            <input type='text' name='postalcode' className='user-input' placeholder='Enter Postal Code' value={postalCode} onChange={e => setPostalCode(e.target.value)} />
                         </div>
 
                         <div className='pl-4'>

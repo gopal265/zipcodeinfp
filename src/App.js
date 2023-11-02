@@ -12,7 +12,7 @@ function App() {
       <div className='text-color'><h1>Find the Place</h1></div>
       <PostalCode />
       {
-        loading == true ?(
+        loading === true ?(
           <Loader />
         ) :(
           <LocationInfo />

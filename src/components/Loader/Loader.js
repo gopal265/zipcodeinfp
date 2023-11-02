@@ -4,8 +4,8 @@ const Loader = () => {
     return (
         <div className='p-4'>
             {/* used bootstrap spinner to get the loading animation  */}
-            <div class="spinner-border text-primary" role="status">
-                <span class="sr-only">Loading...</span>
+            <div className="spinner-border text-primary" role="status">
+                <span className="sr-only">Loading...</span>
             </div>
         </div>
     )
