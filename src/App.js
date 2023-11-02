@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-
+import PostalCode from './components/PostalCode/PostalCode';
+import LocationInfo from './components/LocationInfo/LocationInfo';
+import { useSelector } from 'react-redux';
+import Loader from './components/Loader/Loader';
 function App() {
+ 
+  const { loading} = useSelector(state => state.location);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App center-v pl-1 pr-1">
+      <div className='text-color'><h1>Find the Place</h1></div>
+      <PostalCode />
+      {
+        loading == true ?(
+          <Loader />
+        ) :(
+          <LocationInfo />
+        )
+      }
+
     </div>
   );
 }
