@@ -12,14 +12,10 @@ Zip Code Information App
 
 ## Introduction
 
-It is a simple React application where you can enter the  zipcode and the  related details about the zip code like country,state,places etc.
+It is a simple React application where you can enter the  zipcode and the  related details about the zip code like country,state,places etc will be displayed.
 ## Live Project Link
 Link : https://zipcodeinfo.onrender.com
-## Some Images
 
-
-
-  
 
 ## Prerequisites
 
@@ -27,7 +23,6 @@ Prerequisites or dependencies that need to be installed or set up before running
 
 - [Node.js](https://nodejs.org/) 
 - [npm](https://www.npmjs.com/) 
-- Other dependencies...
 
 ## Technologies Used
 
